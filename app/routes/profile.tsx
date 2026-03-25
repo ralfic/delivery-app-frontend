@@ -1,16 +1,9 @@
 import ProfileDeliveryDetails from '~/components/pofile/ProfileDeliveryDetails';
 import ProfileHeader from '~/components/pofile/ProfileHeader';
 import ProfileSidebar from '~/components/pofile/ProfileSidebar';
+import { mockUser } from '~/constants/mokData';
 
 export default function ProfilePage() {
-  const mockUser = {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    ordersCount: 5,
-    id: 1,
-    role: 'customer',
-    balance: 1000,
-  };
   return (
     <>
       <h1 className="text-4xl font-extrabold text-gray-900 mb-8 tracking-tight">

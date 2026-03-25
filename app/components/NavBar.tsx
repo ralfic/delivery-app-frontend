@@ -1,11 +1,11 @@
-import { navItems } from '~/constants/nav-items';
+import { navItems } from '~/constants/navItems';
 import { Link, useLocation } from 'react-router';
 
 export default function NavBar() {
   const currentPath = useLocation().pathname;
 
   return (
-    <div className="flex items-center space-x-2">
+    <nav className="flex items-center space-x-2">
       {navItems.map((item) => {
         const Icon = item.icon;
         const isActive = currentPath === item.to;
@@ -25,6 +25,6 @@ export default function NavBar() {
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 }

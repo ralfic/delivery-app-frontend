@@ -1,5 +1,6 @@
 import { RotateCcw } from 'lucide-react';
 import type { IOrder } from '~/types/order';
+import { Button } from '../ui/button';
 
 export default function OrderCard({ order }: { order: IOrder }) {
   return (
@@ -46,10 +47,10 @@ export default function OrderCard({ order }: { order: IOrder }) {
               ${order.total.toFixed(2)}
             </p>
           </div>
-          <button className="flex items-center space-x-2 bg-[#FF6347] hover:bg-[#FF4500] text-white px-6 py-3 rounded-full transition-all duration-300 font-bold shadow-lg shadow-[#FF6347]/30 hover:shadow-xl hover:shadow-[#FF6347]/40">
+          <Button variant={'brand'} size={'massive'}>
             <RotateCcw size={18} />
             <span>Reorder</span>
-          </button>
+          </Button>
         </div>
       </div>
     </div>

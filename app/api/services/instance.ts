@@ -7,12 +7,4 @@ const options = {
   withCredentials: true,
 };
 
-export const axiosWithAuth = axios.create(options);
-export const axiosClassic = axios.create(options);
-
-axiosWithAuth.interceptors.response.use(
-  (config) => config,
-  async (error) => {
-    return Promise.reject(error);
-  },
-);
+export const instance = axios.create(options);

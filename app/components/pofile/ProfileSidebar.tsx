@@ -1,5 +1,6 @@
 import { Wallet, CreditCard, Package } from 'lucide-react';
 import type { IUser } from '~/types/user';
+import { Button } from '../ui/button';
 
 export default function ProfileSidebar({ user }: { user: IUser }) {
   return (
@@ -14,10 +15,10 @@ export default function ProfileSidebar({ user }: { user: IUser }) {
         <p className="text-4xl font-extrabold mb-6 tracking-tight">
           ${user.balance}
         </p>
-        <button className="w-full bg-white text-[#FF6347] font-bold py-3 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg flex items-center justify-center space-x-2">
+        <Button variant={'brand-outline'} size={'massive'}>
           <CreditCard size={18} />
           <span>Top Up Balance</span>
-        </button>
+        </Button>
       </div>
 
       {/* Quick Stats */}
@@ -44,7 +45,9 @@ export default function ProfileSidebar({ user }: { user: IUser }) {
               </div>
               <span className="text-gray-700 font-medium">Total Spent</span>
             </div>
-            <span className="text-xl font-extrabold text-gray-900">$2,450</span>
+            <span className="text-xl font-extrabold text-gray-900">
+              ${user.totalSpent}
+            </span>
           </div>
         </div>
       </div>

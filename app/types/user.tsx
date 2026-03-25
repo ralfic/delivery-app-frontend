@@ -5,4 +5,5 @@ export interface IUser {
   role: string;
   ordersCount: number;
   balance: number;
+  totalSpent: number;
 }

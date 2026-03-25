@@ -1,4 +1,5 @@
 import { Search } from 'lucide-react';
+import { Button } from '../ui/button';
 
 export default function OrderSearch() {
   return (
@@ -10,21 +11,13 @@ export default function OrderSearch() {
         <div className="flex-1">
           <input
             type="email"
-            placeholder="Enter your email"
             className="w-full px-4 py-3.5 bg-gray-100 border-transparent rounded-xl focus:bg-white focus:border-[#FF6347] focus:ring-2 focus:ring-[#FF6347]/20 transition-all duration-300 outline-none"
           />
         </div>
-        <div className="flex-1">
-          <input
-            type="tel"
-            placeholder="Enter your phone"
-            className="w-full px-4 py-3.5 bg-gray-100 border-transparent rounded-xl focus:bg-white focus:border-[#FF6347] focus:ring-2 focus:ring-[#FF6347]/20 transition-all duration-300 outline-none"
-          />
-        </div>
-        <button className="flex items-center justify-center space-x-2 bg-[#FF6347] hover:bg-[#FF4500] text-white px-6 py-3.5 rounded-full transition-all duration-300 font-bold shadow-lg shadow-[#FF6347]/30 hover:shadow-xl hover:shadow-[#FF6347]/40">
+        <Button variant="brand" size="xl" className="rounded-full">
           <Search size={20} />
           <span>Search</span>
-        </button>
+        </Button>
       </div>
     </div>
   );

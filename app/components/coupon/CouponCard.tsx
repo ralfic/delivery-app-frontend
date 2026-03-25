@@ -1,5 +1,6 @@
 import { Copy } from 'lucide-react';
 import type { ICoupon } from '~/types/cupoun';
+import { Button } from '../ui/button';
 
 export default function CouponCard({ coupon }: { coupon: ICoupon }) {
   return (
@@ -33,10 +34,10 @@ export default function CouponCard({ coupon }: { coupon: ICoupon }) {
         </div>
 
         {/* Copy Button */}
-        <button className="w-full flex items-center justify-center space-x-2 bg-[#FF6347] hover:bg-[#FF4500] text-white font-bold py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#FF6347]/30 hover:shadow-xl hover:shadow-[#FF6347]/40">
+        <Button variant="brand" size="massive">
           <Copy size={18} />
           <span>Copy Code</span>
-        </button>
+        </Button>
       </div>
     </div>
   );

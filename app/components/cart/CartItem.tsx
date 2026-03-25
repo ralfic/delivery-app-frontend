@@ -1,5 +1,6 @@
 import { Minus, Plus } from 'lucide-react';
 import type { ICartItem } from '~/types/cart';
+import { Button } from '../ui/button';
 
 export default function CartItem({ item }: { item: ICartItem }) {
   return (
@@ -15,16 +16,16 @@ export default function CartItem({ item }: { item: ICartItem }) {
         <p className="text-[#FF6347] font-extrabold text-sm">${item.price}</p>
       </div>
 
-      <div className="flex items-center gap-2">
-        <button className="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+      <div className="flex items-center gap-1">
+        <Button size={'icon'}>
           <Minus size={14} />
-        </button>
+        </Button>
         <span className="w-8 text-center font-bold text-sm">
           {item.quantity}
         </span>
-        <button className="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+        <Button size={'icon'}>
           <Plus size={14} />
-        </button>
+        </Button>
       </div>
     </div>
   );

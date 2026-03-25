@@ -1,5 +1,6 @@
 import { Plus, Star } from 'lucide-react';
 import type { IProduct } from '~/types/shop';
+import { Button } from '../ui/button';
 
 export default function ShopCard({ product }: { product: IProduct }) {
   return (
@@ -29,10 +30,10 @@ export default function ShopCard({ product }: { product: IProduct }) {
           <span className="text-2xl font-extrabold text-gray-900">
             ${product.price}
           </span>
-          <button className="flex items-center space-x-2 bg-[#FF6347] hover:bg-[#FF4500] text-white px-5 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-[#FF6347]/30 hover:shadow-xl hover:shadow-[#FF6347]/40 font-medium">
+          <Button variant={'brand'} size={'xl'} className="h-10">
             <Plus size={18} />
             <span>Add</span>
-          </button>
+          </Button>
         </div>
       </div>
     </div>
